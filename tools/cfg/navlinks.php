@@ -61,7 +61,7 @@ $config->navlinks = [
 			[
 				"permission" => "Substitutions::ShowSubstitutions",
 				"name" => "Domácí úkoly",
-				"link" => "/substitutions/",
+				"link" => "/homeworks/",
 				"target" => ""
 			],
 			[
