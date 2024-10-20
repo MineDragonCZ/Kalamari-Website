@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=720, maximum-scale=1.0">
-	<title>Bakaláři 2.0 | <?= $pageTitle; ?></title>
+	<title>Bakaláři v2 | <?= $pageTitle; ?></title>
 
 	<!-- Links CSS and JS -->
 	<link rel="icon" type="image/x-icon" href="https://bakalari.cz/favicons/favicon-32x32.png">

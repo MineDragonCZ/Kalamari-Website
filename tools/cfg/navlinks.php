@@ -23,7 +23,7 @@ $config->navlinks = [
 				"link" => "/marks/final/",
 				"target" => ""
 			],
-			[
+			/*[
 				"permission" => "Marks::PredictMarks",
 				"name" => "Předvídač známek",
 				"link" => "/marks/predict/",
@@ -33,7 +33,7 @@ $config->navlinks = [
 				"name" => "Výchovná opatření",
 				"link" => "/marks/measures/",
 				"target" => ""
-			]
+			]*/
 		]
 	],
 	[
@@ -58,7 +58,7 @@ $config->navlinks = [
 				"link" => "/substitutions/",
 				"target" => ""
 			],
-			[
+			/*[
 				"permission" => "Substitutions::ShowSubstitutions",
 				"name" => "Domácí úkoly",
 				"link" => "/homeworks/",
@@ -80,7 +80,7 @@ $config->navlinks = [
 				"name" => "Výukové zdroje",
 				"link" => "/resources/",
 				"target" => ""
-			]
+			]*/
 		]
 	],
 	[
@@ -93,14 +93,14 @@ $config->navlinks = [
 				"link" => "/absence/subjects/",
 				"target" => ""
 			],
-			[
+			/*[
 				"name" => "Přehled absence",
 				"link" => "/absence/",
 				"target" => ""
-			]
+			]*/
 		]
 	],
-	[
+	/*[
 		"permission" => "Komens",
 		"name" => "Komens",
 		"icon" => "fa-solid fa-message fa-fw",
@@ -131,6 +131,6 @@ $config->navlinks = [
 		"icon" => "fa-solid fa-calendar-days fa-fw",
 		"link" => "/events/",
 		"target" => ""
-	]
+	]*/
 ];
 ?>

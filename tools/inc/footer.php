@@ -10,8 +10,10 @@ class Footer {
 				<footer class="py-5">
 					<div class="px-4 text-center"
 						<span><span>S ❤️ vytvořil Vojtěch Šín | Provozováno na systému</span> <img src="https://www.bakalari.cz/images/bakalari-logo.svg" width="109" height="22" class="ml-3"></span><br/>
+						<br/>
 						<span>Děkuji autorovi <a href="https://github.com/bakalari-api/bakalari-api-v3" target="_blank">této dokumentace</a> za její vytvoření.</span><br/>
-						<span>Ano! Jedná se o open-source projekt! <a href="https://github.com/MineDragonCZ/FrontEnd-Bakalari-2.0" target="_blank">GitHub Repozitář</a></span>
+						<span>Ano! Jedná se o open-source projekt! <a href="https://github.com/MineDragonCZ/FrontEnd-Bakalari-2.0" target="_blank">GitHub Repozitář</a></span><br/>
+						<a href="/o-projektu/">O projektu</a>
 					</div>
 				</footer>
 			</div>

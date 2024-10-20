@@ -12,8 +12,9 @@ include(dirname(__FILE__) . "/../tools/inc/page.php");
 				<div class="col">
 					<h3>Na této stránce se pracuje!</h3>
 					<span class="card-desc">
-						Zatím můžete zkusit třeba rozvrhy
+						Zatím můžete zkusit vybrat nějaký z modulů v postranní navigaci.
 					</span>
+					<div class="card-foot mt-4"><a href="/o-projektu/"><div class="btn btn-primary">O projektu</div></a></div>
 				</div>
 			</div>
 		</div>

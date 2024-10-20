@@ -51,8 +51,10 @@ include(dirname(__FILE__) . "/../tools/inc/page.php");
 			</form>
 			<div class="col-12 center pt-5">
 				<span><span>S ❤️ vytvořil Vojtěch Šín | Provozováno na systému</span> <img src="https://www.bakalari.cz/images/bakalari-logo.svg" width="109" height="22" class="ml-3"></span><br/>
+				<br/>
 				<span>Děkuji autorovi <a href="https://github.com/bakalari-api/bakalari-api-v3" target="_blank">této dokumentace</a> za její vytvoření.</span><br/>
 				<span>Ano! Jedná se o open-source projekt! <a href="https://github.com/MineDragonCZ/FrontEnd-Bakalari-2.0" target="_blank">GitHub Repozitář</a></span><br/>
+				<a href="/o-projektu/">O projektu</a><br/>
 				<br/>
 				<span>Vaše heslo není zpracováváno na našich serverech, ale odesílá se přímo na server příslušné školy!</span>
 			</div>
