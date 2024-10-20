@@ -1,6 +1,12 @@
 <?php
 $config->navlinks = [
 	[
+		"name" => "Přehled",
+		"icon" => "fa-solid fa-house fa-fw",
+		"link" => "/dashboard/",
+		"target" => ""
+	],
+	[
 		"permission" => "Marks",
 		"name" => "Klasifikace",
 		"icon" => "fa-solid fa-arrow-up-1-9 fa-fw",
@@ -31,7 +37,6 @@ $config->navlinks = [
 		]
 	],
 	[
-		"permission" => "Timetable",
 		"name" => "Výuka",
 		"icon" => "fa-solid fa-book fa-fw",
 		"subs" => [
@@ -74,6 +79,23 @@ $config->navlinks = [
 			[
 				"name" => "Výukové zdroje",
 				"link" => "/resources/",
+				"target" => ""
+			]
+		]
+	],
+	[
+		"permission" => "Absence",
+		"name" => "Absence",
+		"icon" => "fa-solid fa-sheet-plastic fa-fw",
+		"subs" => [
+			[
+				"name" => "Zaměškanost",
+				"link" => "/absence/subjects/",
+				"target" => ""
+			],
+			[
+				"name" => "Přehled absence",
+				"link" => "/absence/",
 				"target" => ""
 			]
 		]

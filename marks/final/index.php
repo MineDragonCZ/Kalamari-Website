@@ -1,6 +1,6 @@
 <?php
 $pageTitle = "Pololetní klasifikace";
-include("../../tools/inc/page.php");
+include(dirname(__FILE__) . "/../../tools/inc/page.php");
 ?>
 
 <div class="mx-5">
@@ -123,8 +123,3 @@ include("../../tools/inc/page.php");
 	}
 	updateMarksTable();
 </script>
-<style>
-	.bordered-row {
-		font-weight: normal;
-	}
-</style>

@@ -1,5 +1,5 @@
 /**
- * MAIN JS FILE FOR AW WEBSITE
+ * MAIN JS FILE FOR MY WEBSITES
  * @author MineDragonCZ_
  */
 

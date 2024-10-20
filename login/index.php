@@ -1,7 +1,7 @@
 <?php
 $noNav = true;
 $pageTitle = "Přihlášení";
-include("../tools/inc/page.php");
+include(dirname(__FILE__) . "/../tools/inc/page.php");
 ?>
 <div class="row justify-content-center align-items-center" style="min-height: 100dvh;">
 	<div class="col-xl-6 col-lg-8 col-12">

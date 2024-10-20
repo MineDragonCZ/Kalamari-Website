@@ -1,6 +1,6 @@
 <?php
 $pageTitle = "Průběžná klasifikace";
-include("../tools/inc/page.php");
+include(dirname(__FILE__) . "/../tools/inc/page.php");
 ?>
 
 <div class="mx-5">
@@ -75,11 +75,10 @@ include("../tools/inc/page.php");
 			for(const [markId, markData] of Object.entries(marks[subjectId])){
 				var backColor = '#b8b8b8';
 				if(markData.IsNew) backColor = '#48fe06';
-				//if(parseInt(markData.MarkText) != NaN && ((parseInt(markData.MarkText) > 4 && !markData.IsPoints) || (parseInt(markData.MarkText) < 25 && markData.IsPoints))) backColor = '#ff0000';
 				content += `<td width="150px" class="timetable-hour hoverable-card-trigger embed-karta-left" style="background: ${backColor}22; --color: ${backColor};">`;
 				content += `
 					<div class="row h-100">
-						<div class="col-12 align-self-center center card-title" style="font-size: ${(markData.Weight + 4)*4}px;">${markData.MarkText}${markData.IsPoints ? '%' : ''}</div>
+						<div class="col-12 align-self-center center card-title" style="font-size: ${(markData.Weight + 15)*1.5}px;">${markData.MarkText}${markData.IsPoints ? '%' : ''}</div>
 						<div class="col-12 align-self-end center card-desc text-sm no-wrap">${markData.Weight}<br/>${new Date(markData.MarkDate).toLocaleDateString()}</div>
 					</div>
 						

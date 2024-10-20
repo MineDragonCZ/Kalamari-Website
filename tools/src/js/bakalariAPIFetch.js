@@ -146,10 +146,20 @@ async function updateUserPermissionsAndNavbar() {
 		if(perm && !enabledModules.includes(perm)){
 			continue;
 		}
+		if(!data.subs){
+			var active = (window.location.pathname == data.link);
+			content += `<li class="nav-item nav-item-panel">
+				<a class="nav-link no-wrap${active ? " pp-active" : ""}" target="${data.target}" href="${data.link}">
+					<i class="${data.icon}"></i> <linkTitle class="d-lg-inline d-none">${data.name}</linkTitle>
+				</a>
+			</li>`;
+			continue;
+		}
+
 		content += `
 			<li class="nav-item nav-item-panel">
 				<a class="nav-link no-wrap" onclick="toggleDropdown(this); return false;" targetElm="toggle_nav_elm_${key}">
-					<i class="${data["icon"]}"></i> <span class="d-lg-inline d-none"> ${data["name"]} <i class="fa-solid fa-caret-down"></i></span>
+					<i class="${data.icon}"></i> <linkTitle class="d-lg-inline d-none">${data.name} <i class="fa-solid fa-caret-down"></i></linkTitle>
 				</a>
 				<ul class="navbar-nav toggleDown" style="z-index: 99 !important; position: relative;" id="toggle_nav_elm_${key}">
 		`;

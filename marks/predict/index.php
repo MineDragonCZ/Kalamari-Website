@@ -1,6 +1,6 @@
 <?php
 $pageTitle = "Předvídač";
-include("../../tools/inc/page.php");
+include(dirname(__FILE__) . "/../../tools/inc/page.php");
 ?>
 <div class="container-xl">
 	<div class="mx-5">
