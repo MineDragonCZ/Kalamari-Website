@@ -23,11 +23,12 @@
 			</ul>
 		</div>
 	</div>
-	<div class="col p-0 pt-5" style="height: 100dvh !important; overflow-y: auto;">
-		<div class="d-none" id="mainNavbarTranslates">
-			<?= json_encode($config->navlinks); ?>
-		</div>
-		<div class="topic-title underlined-120"><?= $pageTitle; ?></div>
+	<div class="col p-0 pt-5 row m-0" style="height: 100dvh !important; overflow-y: auto;">
+		<div class="col-12 p-0 m-0">
+			<div class="d-none" id="mainNavbarTranslates">
+				<?= json_encode($config->navlinks); ?>
+			</div>
+			<div class="topic-title underlined-120"><?= $pageTitle; ?></div>
 <style>
 	body {
 		height: 100dvh !important;

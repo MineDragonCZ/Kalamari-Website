@@ -126,17 +126,11 @@ $config->navlinks = [
 		]
 	],
 	[
-		"permission" => "Events",
-		"name" => "Události",
+		"permission" => "Events::ShowEvents",
+		"name" => "Plán akcí",
 		"icon" => "fa-solid fa-calendar-days fa-fw",
-		"subs" => [
-			[
-				"permission" => "Events::ShowEvents",
-				"name" => "Nadcházející události",
-				"link" => "/events/",
-				"target" => ""
-			]
-		]
+		"link" => "/events/",
+		"target" => ""
 	]
 ];
 ?>

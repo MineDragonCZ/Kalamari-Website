@@ -46,8 +46,6 @@ include(dirname(__FILE__) . "/../tools/inc/page.php");
 			response = await fetchDataFromBAK('/api/3/timetable/permanent', null, "GET", true);
 		var json = await response.json();
 
-		console.log(json);
-
 		var table = $("#timetable");
 
 		var hours = json.Hours;
