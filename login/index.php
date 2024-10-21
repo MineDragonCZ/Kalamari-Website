@@ -12,7 +12,7 @@ include(dirname(__FILE__) . "/../tools/inc/page.php");
 			<form onsubmit="logIn(); return false;">
 				<div class="row">
 					<div class="col-12 text-center">
-						<a href="https://bakalari.cz" target="_blank"><img src="https://www.bakalari.cz/images/bakalari-logo.svg" width="450px" alt=""></a><br/>
+						<img src="/tools/src/imgs/kalamari.png" width="450px" alt=""><br/>
 						<br/>
 						<span class="topic-title underlined-120">Přihlášení do webového rozhraní</span>
 					</div>
@@ -49,14 +49,17 @@ include(dirname(__FILE__) . "/../tools/inc/page.php");
 					</div>
 				</div>
 			</form>
+			<div class="col-12 center pt-3">
+				<hr/>
+				<span>Vaše heslo není zpracováváno na našich serverech, ale odesílá se přímo na server příslušné školy!</span>
+				<hr/>
+			</div>
 			<div class="col-12 center pt-5">
-				<span><span>S ❤️ vytvořil Vojtěch Šín | Provozováno na systému</span> <img src="https://www.bakalari.cz/images/bakalari-logo.svg" width="109" height="22" class="ml-3"></span><br/>
+				<span><span>S ❤️ vytvořil Vojtěch Šín | Provozováno na systému</span> <a href="https://bakalari.cz" target="_blank"><img src="/tools/src/imgs/bakalari.png" width="109" height="22" class="ml-3"></a></span><br/>
 				<br/>
 				<span>Děkuji autorovi <a href="https://github.com/bakalari-api/bakalari-api-v3" target="_blank">této dokumentace</a> za její vytvoření.</span><br/>
 				<span>Ano! Jedná se o open-source projekt! <a href="https://github.com/MineDragonCZ/FrontEnd-Bakalari-2.0" target="_blank">GitHub Repozitář</a></span><br/>
-				<a href="/o-projektu/">O projektu</a><br/>
-				<br/>
-				<span>Vaše heslo není zpracováváno na našich serverech, ale odesílá se přímo na server příslušné školy!</span>
+				<a href="/o-projektu/">O projektu</a>
 			</div>
 		</div>
 	</div>

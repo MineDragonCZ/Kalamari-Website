@@ -6,8 +6,8 @@
 	<div class="col-auto p-0">
 		<div class="ps-3 d-flex flex-column flex-shrink-0 col-12 p-3 embed-karta-right main-nav-sided" style="--color: var(--secondary); background: var(--navback); height: 100dvh !important;">
 			<a href="/dashboard" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none">
-				<img loading="lazy" src="https://www.bakalari.cz/images/bakalari-logo.svg" alt="" height="30" style="padding-left: 2px;" class="mainNavbar-logo-large ms-3 align-text-top">
-				<img loading="lazy" src="https://bakalari.cz/favicons/favicon-32x32.png" alt="" height="30" style="padding-left: 2px;" class="mainNavbar-logo-small ms-3 align-text-top">
+				<img loading="lazy" src="/tools/src/imgs/kalamari.png" alt="" height="30" style="padding-left: 2px;" class="mainNavbar-logo-large ms-3 align-text-top">
+				<img loading="lazy" src="/tools/src/imgs/kalamari_icon.png" alt="" height="30" style="padding-left: 2px;" class="mainNavbar-logo-small ms-3 align-text-top">
 			</a>
 			<ul class="list-unstyled flex-column ps-1 mb-auto" id="mainNavbar" style="height: 75dvh !important; overflow-y: auto;"></ul>
 			<ul class="list-unstyled ps-1 mb-0">

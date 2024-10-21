@@ -1,0 +1,17 @@
+ErrorDocument 404 /404/
+ErrorDocument 403 /403/
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^ %{REQUEST_SCHEME}://%1%{REQUEST_URI} [R=301,L]
+
+Header set X-XSS-Protection "1; mode=block" 
+Header always set X-Content-Type-Options nosniff 
+Header set X-Download-Options: noopen 
+Header set X-Frame-Options DENY
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+Header set Strict-Transport-Security "max-age=2592000; includeSubDomains"
+Header set Content-Security-Policy "img-src * data: blob:; upgrade-insecure-requests;"
+Header set Permissions-Policy "camera=(self), fullscreen=(*), geolocation=(self), payment=()"
+
+ServerSignature Off

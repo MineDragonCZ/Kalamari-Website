@@ -12,7 +12,7 @@ include(dirname(__FILE__) . "/../tools/inc/page.php");
 				Tyto stránky jsou jakýsi pokus o vytvoření lepšího, pěknějšího a hlavně rychlejšího prostředí pro Bakaláře. Celý projekt využívá REST API, kterou poskytují Bakaláři ke svým serverům pro školy.<br/>
 				Aktuálně jsou zde stránky a informace primárně pro studenty, ale plánem je nadstavit tuto aplikaci i moduly pro učitele a administrátory.<br/>
 			</div>
-			<div class="card-foot center mt-4"><a href="/"><div class="btn btn-primary">Zpět do Bakalářů v2</div></a></div>
+			<div class="card-foot center mt-4"><a href="/"><div class="btn btn-primary">Zpět do Kalamářů</div></a></div>
 		</div>
 	</div>
 </div>
