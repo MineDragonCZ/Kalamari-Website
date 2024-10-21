@@ -61,7 +61,8 @@ async function fetchDataFromBAK(endpoint, requestBody, requestMethod, checkLogin
 	const host = getCookie("bak_host");
 	if (!host) {
 		setUser(null);
-		window.location.href = "/login?returnPath=" + window.location.pathname;
+		if(window.location.pathname != "/login/")
+			window.location.href = "/login?returnPath=" + window.location.pathname;
 		return false;
 	}
 	var head = { "Content-Type": "application/x-www-form-urlencoded", "Authorization": "Bearer " + getAccessToken() };
@@ -103,10 +104,11 @@ function setupLogoutChecker() {
 	var logoutChecker = async () => {
 		var response = await fetchDataFromBAK("/api/3/webmodule", null, "GET", false);
 		if(response.status == 200){
-			if(getFromLink("returnPath"))
-				window.location.href=getFromLink("returnPath");
+			if(getFromLink("returnPath") && getFromLink("returnPath") != "/login/"){
+				window.location.href = getFromLink("returnPath");
+			}
 			else
-				window.location.href="/dashboard/";
+				window.location.href = "/dashboard/";
 		}
 		else
 			clearInterval(interval);

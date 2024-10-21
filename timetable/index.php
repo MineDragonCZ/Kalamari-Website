@@ -134,6 +134,7 @@ include(dirname(__FILE__) . "/../tools/inc/page.php");
 			content += `</td>`
 
 			for (let i = 0; i < hours.length; i++){
+				var hour = hours[i];
 				if(data.DayType != "WorkDay"){
 					var backColor = "#1ac5db";
 					switch(data.DayType){
@@ -165,7 +166,7 @@ include(dirname(__FILE__) . "/../tools/inc/page.php");
 					break;
 				}
 
-				var hourId = hours[i].Id;
+				var hourId = hour.Id;
 				var atom = atoms[hourId];
 				if(atom){
 					var subjectShort = null;
@@ -173,6 +174,7 @@ include(dirname(__FILE__) . "/../tools/inc/page.php");
 					var subjectDesc = "";
 					var subjectTheme = "";
 					var subjectGroups = [];
+					var homeworks = "";
 					var backColor = "#b8b8b8";
 					/* GET SUBJECT */
 					if(atom.SubjectId)
@@ -226,11 +228,34 @@ include(dirname(__FILE__) . "/../tools/inc/page.php");
 						}
 					}
 
-					content += `<td class="timetable-hour hoverable-card-trigger" style="background: ${backColor}22;">`
+					if(atom.Homeworks && atom.Homeworks.length > 0){
+						homeworks += 'DÚ:<br/><ul>';
+						for(let i = 0; i < atom.Homeworks.length; i++){
+							var homework = atom.Homeworks[i];
+							homeworks += `<li>${homework.Text.replaceAll("\n", "<br/>")}</li>`;
+						}
+						homeworks += '</ul>';
+					}
+					var isNow = false;
+					try{
+						var startTime = new Date(data.Date);
+						startTime.setHours(parseInt(hour.BeginTime.split(":")[0]));
+						startTime.setMinutes(parseInt(hour.BeginTime.split(":")[1]));
+
+						var endTime = new Date(data.Date);
+						endTime.setHours(parseInt(hour.EndTime.split(":")[0]));
+						endTime.setMinutes(parseInt(hour.EndTime.split(":")[1]));
+						isNow = (new Date(data.Date).setHours(0, 0, 0, 0) == new Date().setHours(0, 0, 0, 0));
+						isNow &= (startTime < new Date().getTime());
+						isNow &= (endTime > new Date().getTime());
+					}
+					catch(error){}
+
+					content += `<td class="timetable-hour hoverable-card-trigger${isNow ? ' bordered-karta-orange' : ''}" style="${isNow ? 'border-bottom-width: 2px; ' : ''}background: ${backColor}22;">`
 					content += `
 						<div class="row justify-content-center align-items-center h-100">
 							<div class="col-6 card-desc text-sm no-wrap">${subjectGroups.join("<br/>")}</div>
-							<div class="col-6 card-desc text-sm" style="text-align: right !important;">${(atom.RoomId ? rooms[atom.RoomId].Abbrev : "")}</div>
+							<div class="col-6 card-desc text-sm no-wrap" style="text-align: right !important;">${(atom.RoomId ? rooms[atom.RoomId].Abbrev : "")}${(homeworks ? ' <i class="fa-solid fa-book"></i>' : "")}</div>
 							<div class="col-12 center card-title">${subjectShort ? subjectShort : ""}</div>
 							<div class="col-12 center card-desc text-sm">${teachers[atom.TeacherId] ? teachers[atom.TeacherId].Abbrev : ""}</div>
 						</div>
@@ -241,6 +266,7 @@ include(dirname(__FILE__) . "/../tools/inc/page.php");
 								${subjectDesc ? ("" + subjectDesc + "<br/>") : ""}
 								${subjectTheme ? ("Téma: " + subjectTheme + "<br/>") : ""}
 								${teachers[atom.TeacherId] && teachers[atom.TeacherId].Abbrev ? ("Učitel: " + teachers[atom.TeacherId].Name + "<br/>") : ""}
+								${homeworks}
 							</span>
 						</div>
 					`;

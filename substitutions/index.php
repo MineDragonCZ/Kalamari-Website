@@ -5,6 +5,19 @@ include(dirname(__FILE__) . "/../tools/inc/page.php");
 
 <div class="mx-5">
 	<div class="col-12">
+		<div class="mb-2 alert" style="--border: #0FD1F7c5; --back: #0FD1F722; --style: none;">
+			<div class="row align-items-center">
+				<div class="col-auto ms-3">
+					<span class="text-xxl" style="color: #0FD1F7c5;"><i class="fa-solid fa-circle-info"></i></span>
+				</div>
+				<div class="col">
+					<h3>Zobrazení úprav rozvrhu</h3>
+					<span class="card-desc">
+						Na této stránce naleznete veškeré úpravy rozvrhu a to 14 dní dopředu.
+					</span>
+				</div>
+			</div>
+		</div>
 		<div class="row justify-content-center mb-3">
 			<div class="col-6" id="dateSelectorWrapper">
 				<input type="date" id="dateSelector" onchange="dateString = this.value; updateSubstitutionTable();" class="form-control">
@@ -28,7 +41,7 @@ include(dirname(__FILE__) . "/../tools/inc/page.php");
 	}
 
 	function updateDate(){
-		pushLink("timetable", "?d=" + dateString);
+		pushLink("substitutions", "?d=" + dateString);
 		$("#dateSelector").val(dateString);
 	}
 

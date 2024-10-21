@@ -58,13 +58,13 @@ $config->navlinks = [
 				"link" => "/substitutions/",
 				"target" => ""
 			],
-			/*[
+			[
 				"permission" => "Substitutions::ShowSubstitutions",
 				"name" => "Domácí úkoly",
 				"link" => "/homeworks/",
 				"target" => ""
 			],
-			[
+			/*[
 				"permission" => "Subjects::ShowSubjects",
 				"name" => "Přehled předmětů",
 				"link" => "/subjects/",

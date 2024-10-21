@@ -79,11 +79,16 @@ include(dirname(__FILE__) . "/../tools/inc/page.php");
 
 		$("#school").html('');
 		$("#school").append('<option value="" selected="true" disabled>Vyberte...</option>');
-		var json = (await getSchoolsList()).schools;
-		for(let i = 0; i < json.length; i++){
-			$("#school").append(`
-				<option value="${json[i].schoolUrl}"${(json[i].schoolUrl == schoolUrl ? ' selected="true"' : '')}>${json[i].name}</option>
-			`);
+		var schools = await getSchoolsList();
+		if(schools){
+			var json = schools.schools;
+			if(json){
+				for(let i = 0; i < json.length; i++){
+					$("#school").append(`
+						<option value="${json[i].schoolUrl}"${(json[i].schoolUrl == schoolUrl ? ' selected="true"' : '')}>${json[i].name}</option>
+					`);
+				}
+			}
 		}
 	}
 	updateSchools(true);
@@ -106,7 +111,7 @@ include(dirname(__FILE__) . "/../tools/inc/page.php");
 			alertSuccess("Úspěšně přihlášen!");
 			setTimeout(() => {
 				setAccessToken(json.access_token);
-				if(getFromLink("returnPath"))
+				if(getFromLink("returnPath") && getFromLink("returnPath") != "/login/")
 					window.location.href=getFromLink("returnPath");
 				else
 					window.location.href="/dashboard/";
