@@ -11,11 +11,10 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
 	<link rel="stylesheet" href="https://zabak.eu/tools/src/css/main-01062024-8.css">
-	<link rel="stylesheet" href="/tools/src/css/main16.css">
+	<link rel="stylesheet" href="/tools/src/css/main17.css">
 	
 	<!-- EXTERNAL -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" defer></script>
 	<script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 	<script src="https://kit.fontawesome.com/0dd034efb8.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

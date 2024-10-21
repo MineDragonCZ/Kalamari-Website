@@ -17,6 +17,15 @@ class Footer {
 					</div>
 				</footer>
 			</div>
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+			<script>
+				var tooltipTriggerList = [].slice.call(document.querySelectorAll(\'[data-bs-toggle="tooltip"]\'));
+				var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+					return new bootstrap.Tooltip(tooltipTriggerEl, {
+						boundary: document.body
+					});
+				});
+			</script>
 		';
 	}
 }

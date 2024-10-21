@@ -1,0 +1,58 @@
+footer {
+	transition: all 0.7s ease-in-out;
+	background: var(--footer) !important;
+}
+.timetable-hour {
+	height: 100px;
+}
+.hoverable-card {
+	display: none;
+	position: absolute;
+	min-width: 200px;
+	right: 25px;
+	z-index: 80;
+}
+.hoverable-card-trigger:hover .hoverable-card {
+	display: block;
+}
+.hoverable-card-trigger {
+	position: relative;
+}
+.bordered-row {
+	font-weight: normal;
+}
+body {
+	height: 100dvh !important;
+}
+.main-nav-sided .nav-item .nav-link linkTitle {
+	display: inline !important;
+}
+.main-nav-sided .mainNavbar-logo-large {
+	display: inline-block !important;
+}
+.main-nav-sided .mainNavbar-logo-small {
+	display: none !important;
+}
+
+@media only screen and (max-width: 992px) {
+	.main-nav-sided ul .nav-item .nav-link linkTitle {
+		display: none !important;
+	}
+	.main-nav-sided .mainNavbar-logo-large {
+		display: none !important;
+	}
+	.main-nav-sided .mainNavbar-logo-small {
+		display: inline-block !important;
+	}
+
+	.main-nav-sided:has(ul .nav-item .nav-link[toggled="true"]) ul .nav-item .nav-link linkTitle {
+		display: inline !important;
+	}
+
+	.main-nav-sided:has(ul .nav-item .nav-link[toggled="true"]) .mainNavbar-logo-large {
+		display: inline-block !important;
+	}
+	.main-nav-sided:has(ul .nav-item .nav-link[toggled="true"]) .mainNavbar-logo-small {
+		display: none !important;
+	}
+}

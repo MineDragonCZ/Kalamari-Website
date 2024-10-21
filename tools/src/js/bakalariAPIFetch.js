@@ -129,7 +129,16 @@ async function updateUserPermissionsAndNavbar() {
 		json = await response.json();
 		setUser(json);
 	}
-	$("#usernameDiv").html(`<div class="row align-items-center"><div class="col-auto text-xl"><i class="fa-solid fa-user"></i></div><div class="col d-lg-block d-none"><span class="pb-0">${json.FullName}</span><br/><span class="card-desc text-sm pt-0">${json.UserTypeText.capitalize()}</span></div>`);
+	$("#usernameDiv").html(`
+		<div class="row align-items-center m-0 p-0">
+			<div class="col-auto text-xl m-0 p-0">
+				<i class="fa-solid fa-user"></i>
+			</div>
+		<div class="col m-0 p-0 ps-2">
+			<div style="margin-bottom: -10px;"><linkTitle>${json.FullName}</linkTitle></div>
+			<linkTitle class="card-desc text-sm">${json.UserTypeText.capitalize()}</linkTitle>
+		</div>
+	`);
 
 	/* SETUP NAVBAR */
 	var modules = json.EnabledModules;
@@ -152,7 +161,7 @@ async function updateUserPermissionsAndNavbar() {
 			var active = (window.location.pathname == data.link);
 			content += `<li class="nav-item nav-item-panel">
 				<a class="nav-link no-wrap${active ? " pp-active" : ""}" target="${data.target}" href="${data.link}">
-					<i class="${data.icon}"></i> <linkTitle>${data.name}</linkTitle>
+					<i class="${data.icon}"></i><linkTitle> ${data.name}</linkTitle>
 				</a>
 			</li>`;
 			continue;
@@ -174,7 +183,7 @@ async function updateUserPermissionsAndNavbar() {
 		content += `
 			<li class="nav-item nav-item-panel">
 				<a class="nav-link no-wrap" onclick="toggleDropdown(this); return false;" targetElm="toggle_nav_elm_${key}" toggled="${anyActiveLinks ? "true" : "false"}">
-					<i class="${data.icon}"></i> <linkTitle>${data.name} <i class="fa-solid fa-caret-down"></i></linkTitle>
+					<i class="${data.icon}"></i><linkTitle> ${data.name} <i class="fa-solid fa-caret-down"></i></linkTitle>
 				</a>
 				<ul class="navbar-nav toggleDown" style="z-index: 99 !important; position: relative;" id="toggle_nav_elm_${key}">
 		`;
