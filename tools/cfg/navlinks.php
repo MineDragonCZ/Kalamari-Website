@@ -64,13 +64,13 @@ $config->navlinks = [
 				"link" => "/homeworks/",
 				"target" => ""
 			],
-			/*[
+			[
 				"permission" => "Subjects::ShowSubjects",
 				"name" => "Přehled předmětů",
 				"link" => "/subjects/",
 				"target" => ""
 			],
-			[
+			/*[
 				"permission" => "Subjects::ShowSubjectThemes",
 				"name" => "Přehled výuky",
 				"link" => "/themes/",
