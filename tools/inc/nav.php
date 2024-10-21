@@ -33,4 +33,16 @@
 	body {
 		height: 100dvh !important;
 	}
+	#mainNavbar > .nav-item > .nav-link > linkTitle {
+		display: inline !important;
+	}
+	
+	@media only screen and (max-width: 992px) {
+		#mainNavbar > .nav-item > .nav-link > linkTitle {
+			display: none !important;
+		}
+		#mainNavbar:has(.nav-item > .nav-link[toggled="true"]) > .nav-item > .nav-link > linkTitle {
+			display: inline !important;
+		}
+	}
 </style>

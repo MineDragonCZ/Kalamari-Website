@@ -152,30 +152,33 @@ async function updateUserPermissionsAndNavbar() {
 			var active = (window.location.pathname == data.link);
 			content += `<li class="nav-item nav-item-panel">
 				<a class="nav-link no-wrap${active ? " pp-active" : ""}" target="${data.target}" href="${data.link}">
-					<i class="${data.icon}"></i> <linkTitle class="d-lg-inline d-none">${data.name}</linkTitle>
+					<i class="${data.icon}"></i> <linkTitle>${data.name}</linkTitle>
 				</a>
 			</li>`;
 			continue;
 		}
-
-		content += `
-			<li class="nav-item nav-item-panel">
-				<a class="nav-link no-wrap" onclick="toggleDropdown(this); return false;" targetElm="toggle_nav_elm_${key}">
-					<i class="${data.icon}"></i> <linkTitle class="d-lg-inline d-none">${data.name} <i class="fa-solid fa-caret-down"></i></linkTitle>
-				</a>
-				<ul class="navbar-nav toggleDown" style="z-index: 99 !important; position: relative;" id="toggle_nav_elm_${key}">
-		`;
+		var subLinks = ``;
+		var anyActiveLinks = false;
 		for(const [subKey, subData] of Object.entries(data.subs)){
 			var perm = subData.permission;
 			if(perm && !enabledModules.includes(perm)){
 				continue;
 			}
 			var active = (window.location.pathname == subData.link);
-			content += `
+			anyActiveLinks |= active;
+			subLinks += `
 				<li class="nav-item text-md nav-item-panel py-2 ps-4">
 					<a class="nodecor${active ? " pp-active" : ""}" target="${subData.target}" href="${subData.link}">${subData.name}</a>
 				</li>`;
 		}
+		content += `
+			<li class="nav-item nav-item-panel">
+				<a class="nav-link no-wrap" onclick="toggleDropdown(this); return false;" targetElm="toggle_nav_elm_${key}" toggled="${anyActiveLinks ? "true" : "false"}">
+					<i class="${data.icon}"></i> <linkTitle>${data.name} <i class="fa-solid fa-caret-down"></i></linkTitle>
+				</a>
+				<ul class="navbar-nav toggleDown" style="z-index: 99 !important; position: relative;" id="toggle_nav_elm_${key}">
+		`;
+		content += subLinks;
 		content += `
 				</ul>
 			</li>
