@@ -1,4 +1,4 @@
-<div class="row flex-nowrap" style="height: 100dvh !important; overflow-y: auto;">
+<div class="row flex-nowrap m-0 p-0" style="height: 100dvh !important; overflow-y: auto;">
 	<div class="col-auto p-0">
 		<div class="ps-3 d-flex flex-column flex-shrink-0 col-12 p-3 embed-karta-right" style="--color: var(--secondary); background: var(--navback); height: 100dvh !important;">
 			<a href="/dashboard" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none">
