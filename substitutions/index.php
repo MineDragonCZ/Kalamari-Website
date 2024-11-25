@@ -86,6 +86,9 @@ include(dirname(__FILE__) . "/../tools/inc/page.php");
 				case "Substitution":
 					icon = '<i class="fa-solid fa-repeat fa-fw" style="color: #117bb0;"></i>';
 					break;
+				case "RoomChanged":
+					icon = '<i class="fa-solid fa-shuffle fa-fw" style="color: #d3871d"></i>';
+					break;
 				default:
 					break;
 			}

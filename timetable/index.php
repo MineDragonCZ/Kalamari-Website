@@ -223,6 +223,9 @@ include(dirname(__FILE__) . "/../tools/inc/page.php");
 							case "removed":
 								backColor = "#ff0000";
 								break;
+							case "roomchanged":
+								backColor = "#d3871d";
+								break;
 							default:
 								break;
 						}
