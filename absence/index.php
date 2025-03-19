@@ -33,6 +33,7 @@ include(dirname(__FILE__) . "/../tools/inc/page.php");
 			content += `<td class="center"><b>Celkem hodin</b></td>`;
 			content += `<td class="center"><b>Absence</b></td>`;
 			content += `<td class="center"><b>%</b></td>`;
+			content += `<td class="center"><b>Možno zameškat</b></td>`;
 			content += `</thead>`;
 			for(let i = 0; i < json.AbsencesPerSubject.length; i++){
 
@@ -46,11 +47,19 @@ include(dirname(__FILE__) . "/../tools/inc/page.php");
 				if(percentage >= 25)
 					color = '#d41616';
 
+				var moznoZameskatX = -(totalMissed - 0.25*subject.LessonsCount)/0.75;
+
+				// moznoZameskatX > moznoZameskat
+				var moznoZameskat = moznoZameskatX.toFixed(0);
+				if(moznoZameskat > moznoZameskatX) moznoZameskat = (moznoZameskatX.toFixed(0) - 1);
+				if(moznoZameskat < 0) moznoZameskat = 0;
+
 				content += `<tr class="bordered-row" style="--back: ${color}77; background: ${color}22;">`;
 				content += `<td>${subject.SubjectName}</td>`;
 				content += `<td class="center">${subject.LessonsCount}</td>`;
 				content += `<td class="center">${totalMissed}</td>`;
 				content += `<td class="center" style="color: ${color};">${percentageString}</td>`;
+				content += `<td class="center">${moznoZameskat}</td>`;
 				content += `</tr>`;
 			}
 		}
